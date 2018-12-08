@@ -1,0 +1,26 @@
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\Mekatronik Projesi.exe.config
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\Mekatronik Projesi.exe
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\Mekatronik Projesi.pdb
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\ZedGraph.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\ZedGraph.xml
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\obj\Debug\Mekatronik Projesi.csprojAssemblyReference.cache
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\obj\Debug\Mekatronik_Projesi.Form1.resources
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\obj\Debug\Mekatronik_Projesi.Properties.Resources.resources
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\obj\Debug\Mekatronik Projesi.csproj.GenerateResource.cache
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\obj\Debug\Mekatronik Projesi.csproj.CoreCompileInputs.cache
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\obj\Debug\Mekatronik Projesi.csproj.CopyComplete
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\obj\Debug\Mekatronik Projesi.exe
+C:\Users\Fabi Kadir\Documents\Visual Studio 2017\Projects\Mekatronik Projesi\Mekatronik Projesi\obj\Debug\Mekatronik Projesi.pdb
