@@ -32,16 +32,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.seriPort = new System.IO.Ports.SerialPort(this.components);
             this.backgroundWorker_Güncelle = new System.ComponentModel.BackgroundWorker();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl_sekmeler = new System.Windows.Forms.TabControl();
             this.tabPage_Grafik = new System.Windows.Forms.TabPage();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.zgc_grafik_x = new ZedGraph.ZedGraphControl();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.zgc_grafik_y = new ZedGraph.ZedGraphControl();
-            this.zgc_grafik_z = new ZedGraph.ZedGraphControl();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.splitContainer_xyz = new System.Windows.Forms.SplitContainer();
+            this.splitContainer_x = new System.Windows.Forms.SplitContainer();
+            this.zgc_grafik_x1 = new ZedGraph.ZedGraphControl();
+            this.zgc_grafik_x2 = new ZedGraph.ZedGraphControl();
+            this.splitContainer_yz = new System.Windows.Forms.SplitContainer();
+            this.splitContainer_y = new System.Windows.Forms.SplitContainer();
+            this.zgc_grafik_y1 = new ZedGraph.ZedGraphControl();
+            this.zgc_grafik_y2 = new ZedGraph.ZedGraphControl();
+            this.splitContainer_z = new System.Windows.Forms.SplitContainer();
+            this.zgc_grafik_z1 = new ZedGraph.ZedGraphControl();
+            this.zgc_grafik_z2 = new ZedGraph.ZedGraphControl();
+            this.statusStrip_DurumÇubuğu = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel_Durum = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStrip_AraçÇubuğu = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel_SeriPort = new System.Windows.Forms.ToolStripLabel();
             this.toolStripComboBox_SeriPortlar = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -53,27 +59,76 @@
             this.toolStripButton_GerçekZaman = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton_Arabellek = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSplitButton_XEkseni = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripMenuItem_AutoScaleX = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox_Xmax = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBox_Xmin = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripMenuItem_ResetX = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSplitButton_YEkseni = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripMenuItem_AutoScaleY = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox_Ymax = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBox_Ymin = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripMenuItem_ResetY = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSplitButton_ZEkseni = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripMenuItem_AutoScaleZ = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox_Zmax = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBox_Zmin = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripMenuItem_ResetZ = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_Restore = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_RealTime = new System.Windows.Forms.ToolStripButton();
             this.tabPage_SeriPort = new System.Windows.Forms.TabPage();
-            this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
-            this.tabControl1.SuspendLayout();
+            this.propertyGrid_seriport = new System.Windows.Forms.PropertyGrid();
+            this.toolStripMenuItem_ComparisonX = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_ComparisonY = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_ComparisonZ = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox_seriport = new System.Windows.Forms.GroupBox();
+            this.groupBox_Graphic = new System.Windows.Forms.GroupBox();
+            this.colorDialog_veri = new System.Windows.Forms.ColorDialog();
+            this.button_color = new System.Windows.Forms.Button();
+            this.label_symbol = new System.Windows.Forms.Label();
+            this.comboBox_Symbol = new System.Windows.Forms.ComboBox();
+            this.groupBox_about = new System.Windows.Forms.GroupBox();
+            this.pictureBox_ytu = new System.Windows.Forms.PictureBox();
+            this.label_about = new System.Windows.Forms.Label();
+            this.tabControl_sekmeler.SuspendLayout();
             this.tabPage_Grafik.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer_xyz)).BeginInit();
+            this.splitContainer_xyz.Panel1.SuspendLayout();
+            this.splitContainer_xyz.Panel2.SuspendLayout();
+            this.splitContainer_xyz.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer_x)).BeginInit();
+            this.splitContainer_x.Panel1.SuspendLayout();
+            this.splitContainer_x.Panel2.SuspendLayout();
+            this.splitContainer_x.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer_yz)).BeginInit();
+            this.splitContainer_yz.Panel1.SuspendLayout();
+            this.splitContainer_yz.Panel2.SuspendLayout();
+            this.splitContainer_yz.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer_y)).BeginInit();
+            this.splitContainer_y.Panel1.SuspendLayout();
+            this.splitContainer_y.Panel2.SuspendLayout();
+            this.splitContainer_y.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer_z)).BeginInit();
+            this.splitContainer_z.Panel1.SuspendLayout();
+            this.splitContainer_z.Panel2.SuspendLayout();
+            this.splitContainer_z.SuspendLayout();
+            this.statusStrip_DurumÇubuğu.SuspendLayout();
+            this.toolStrip_AraçÇubuğu.SuspendLayout();
             this.tabPage_SeriPort.SuspendLayout();
+            this.groupBox_seriport.SuspendLayout();
+            this.groupBox_Graphic.SuspendLayout();
+            this.groupBox_about.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ytu)).BeginInit();
             this.SuspendLayout();
             // 
             // seriPort
             // 
             this.seriPort.DtrEnable = true;
-            this.seriPort.ReceivedBytesThreshold = 13;
+            this.seriPort.ReceivedBytesThreshold = 25;
             this.seriPort.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.seriPort_DataReceived);
             // 
             // backgroundWorker_Güncelle
@@ -81,157 +136,303 @@
             this.backgroundWorker_Güncelle.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker_Güncelle_DoWork);
             this.backgroundWorker_Güncelle.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_Güncelle_RunWorkerCompleted);
             // 
-            // tabControl1
+            // tabControl_sekmeler
             // 
-            this.tabControl1.Controls.Add(this.tabPage_Grafik);
-            this.tabControl1.Controls.Add(this.tabPage_SeriPort);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(976, 543);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl_sekmeler.Controls.Add(this.tabPage_Grafik);
+            this.tabControl_sekmeler.Controls.Add(this.tabPage_SeriPort);
+            this.tabControl_sekmeler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl_sekmeler.Location = new System.Drawing.Point(0, 0);
+            this.tabControl_sekmeler.Name = "tabControl_sekmeler";
+            this.tabControl_sekmeler.SelectedIndex = 0;
+            this.tabControl_sekmeler.Size = new System.Drawing.Size(1031, 543);
+            this.tabControl_sekmeler.TabIndex = 0;
             // 
             // tabPage_Grafik
             // 
-            this.tabPage_Grafik.Controls.Add(this.splitContainer1);
-            this.tabPage_Grafik.Controls.Add(this.statusStrip1);
-            this.tabPage_Grafik.Controls.Add(this.toolStrip1);
+            this.tabPage_Grafik.Controls.Add(this.splitContainer_xyz);
+            this.tabPage_Grafik.Controls.Add(this.statusStrip_DurumÇubuğu);
+            this.tabPage_Grafik.Controls.Add(this.toolStrip_AraçÇubuğu);
             this.tabPage_Grafik.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Grafik.Name = "tabPage_Grafik";
             this.tabPage_Grafik.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Grafik.Size = new System.Drawing.Size(968, 517);
+            this.tabPage_Grafik.Size = new System.Drawing.Size(1023, 517);
             this.tabPage_Grafik.TabIndex = 1;
-            this.tabPage_Grafik.Text = "Grafik Sekmesi";
+            this.tabPage_Grafik.Text = "Graphic Tab";
             this.tabPage_Grafik.UseVisualStyleBackColor = true;
             // 
-            // splitContainer1
+            // splitContainer_xyz
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 28);
-            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer_xyz.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer_xyz.Location = new System.Drawing.Point(3, 28);
+            this.splitContainer_xyz.Name = "splitContainer_xyz";
             // 
-            // splitContainer1.Panel1
+            // splitContainer_xyz.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.zgc_grafik_x);
-            this.splitContainer1.Panel1MinSize = 0;
+            this.splitContainer_xyz.Panel1.Controls.Add(this.splitContainer_x);
+            this.splitContainer_xyz.Panel1MinSize = 0;
             // 
-            // splitContainer1.Panel2
+            // splitContainer_xyz.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Panel2MinSize = 0;
-            this.splitContainer1.Size = new System.Drawing.Size(962, 464);
-            this.splitContainer1.SplitterDistance = 318;
-            this.splitContainer1.TabIndex = 10;
+            this.splitContainer_xyz.Panel2.Controls.Add(this.splitContainer_yz);
+            this.splitContainer_xyz.Panel2MinSize = 0;
+            this.splitContainer_xyz.Size = new System.Drawing.Size(1017, 464);
+            this.splitContainer_xyz.SplitterDistance = 336;
+            this.splitContainer_xyz.TabIndex = 10;
             // 
-            // zgc_grafik_x
+            // splitContainer_x
             // 
-            this.zgc_grafik_x.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zgc_grafik_x.IsEnableHPan = false;
-            this.zgc_grafik_x.IsEnableHZoom = false;
-            this.zgc_grafik_x.IsEnableVPan = false;
-            this.zgc_grafik_x.IsEnableVZoom = false;
-            this.zgc_grafik_x.IsShowContextMenu = false;
-            this.zgc_grafik_x.IsShowPointValues = true;
-            this.zgc_grafik_x.Location = new System.Drawing.Point(0, 0);
-            this.zgc_grafik_x.Name = "zgc_grafik_x";
-            this.zgc_grafik_x.ScrollGrace = 0D;
-            this.zgc_grafik_x.ScrollMaxX = 0D;
-            this.zgc_grafik_x.ScrollMaxY = 0D;
-            this.zgc_grafik_x.ScrollMaxY2 = 0D;
-            this.zgc_grafik_x.ScrollMinX = 0D;
-            this.zgc_grafik_x.ScrollMinY = 0D;
-            this.zgc_grafik_x.ScrollMinY2 = 0D;
-            this.zgc_grafik_x.Size = new System.Drawing.Size(318, 464);
-            this.zgc_grafik_x.TabIndex = 8;
-            this.zgc_grafik_x.UseExtendedPrintDialog = true;
-            this.zgc_grafik_x.PointValueEvent += new ZedGraph.ZedGraphControl.PointValueHandler(this.zgc_grafik_PointValueEvent);
+            this.splitContainer_x.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer_x.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer_x.Name = "splitContainer_x";
+            this.splitContainer_x.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // splitContainer2
+            // splitContainer_x.Panel1
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer_x.Panel1.Controls.Add(this.zgc_grafik_x1);
+            this.splitContainer_x.Panel1MinSize = 0;
             // 
-            // splitContainer2.Panel1
+            // splitContainer_x.Panel2
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.zgc_grafik_y);
-            this.splitContainer2.Panel1MinSize = 0;
+            this.splitContainer_x.Panel2.Controls.Add(this.zgc_grafik_x2);
+            this.splitContainer_x.Panel2Collapsed = true;
+            this.splitContainer_x.Panel2MinSize = 0;
+            this.splitContainer_x.Size = new System.Drawing.Size(336, 464);
+            this.splitContainer_x.SplitterDistance = 239;
+            this.splitContainer_x.TabIndex = 0;
             // 
-            // splitContainer2.Panel2
+            // zgc_grafik_x1
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.zgc_grafik_z);
-            this.splitContainer2.Panel2MinSize = 0;
-            this.splitContainer2.Size = new System.Drawing.Size(640, 464);
-            this.splitContainer2.SplitterDistance = 318;
-            this.splitContainer2.TabIndex = 0;
+            this.zgc_grafik_x1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zgc_grafik_x1.IsEnableHPan = false;
+            this.zgc_grafik_x1.IsEnableHZoom = false;
+            this.zgc_grafik_x1.IsEnableVPan = false;
+            this.zgc_grafik_x1.IsEnableVZoom = false;
+            this.zgc_grafik_x1.IsShowContextMenu = false;
+            this.zgc_grafik_x1.IsShowPointValues = true;
+            this.zgc_grafik_x1.Location = new System.Drawing.Point(0, 0);
+            this.zgc_grafik_x1.Name = "zgc_grafik_x1";
+            this.zgc_grafik_x1.ScrollGrace = 0D;
+            this.zgc_grafik_x1.ScrollMaxX = 0D;
+            this.zgc_grafik_x1.ScrollMaxY = 0D;
+            this.zgc_grafik_x1.ScrollMaxY2 = 0D;
+            this.zgc_grafik_x1.ScrollMinX = 0D;
+            this.zgc_grafik_x1.ScrollMinY = 0D;
+            this.zgc_grafik_x1.ScrollMinY2 = 0D;
+            this.zgc_grafik_x1.Size = new System.Drawing.Size(336, 464);
+            this.zgc_grafik_x1.TabIndex = 0;
+            this.zgc_grafik_x1.UseExtendedPrintDialog = true;
+            this.zgc_grafik_x1.PointValueEvent += new ZedGraph.ZedGraphControl.PointValueHandler(this.zgc_grafikler_PointValueEvent);
+            this.zgc_grafik_x1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.zgc_grafikler_KeyPress);
+            this.zgc_grafik_x1.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.zgc_grafikler_MouseWheel);
             // 
-            // zgc_grafik_y
+            // zgc_grafik_x2
             // 
-            this.zgc_grafik_y.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zgc_grafik_y.IsEnableHPan = false;
-            this.zgc_grafik_y.IsEnableHZoom = false;
-            this.zgc_grafik_y.IsEnableVPan = false;
-            this.zgc_grafik_y.IsEnableVZoom = false;
-            this.zgc_grafik_y.IsShowContextMenu = false;
-            this.zgc_grafik_y.IsShowPointValues = true;
-            this.zgc_grafik_y.Location = new System.Drawing.Point(0, 0);
-            this.zgc_grafik_y.Name = "zgc_grafik_y";
-            this.zgc_grafik_y.ScrollGrace = 0D;
-            this.zgc_grafik_y.ScrollMaxX = 0D;
-            this.zgc_grafik_y.ScrollMaxY = 0D;
-            this.zgc_grafik_y.ScrollMaxY2 = 0D;
-            this.zgc_grafik_y.ScrollMinX = 0D;
-            this.zgc_grafik_y.ScrollMinY = 0D;
-            this.zgc_grafik_y.ScrollMinY2 = 0D;
-            this.zgc_grafik_y.Size = new System.Drawing.Size(318, 464);
-            this.zgc_grafik_y.TabIndex = 9;
-            this.zgc_grafik_y.UseExtendedPrintDialog = true;
+            this.zgc_grafik_x2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zgc_grafik_x2.IsEnableHPan = false;
+            this.zgc_grafik_x2.IsEnableHZoom = false;
+            this.zgc_grafik_x2.IsEnableVPan = false;
+            this.zgc_grafik_x2.IsEnableVZoom = false;
+            this.zgc_grafik_x2.IsShowContextMenu = false;
+            this.zgc_grafik_x2.IsShowPointValues = true;
+            this.zgc_grafik_x2.Location = new System.Drawing.Point(0, 0);
+            this.zgc_grafik_x2.Name = "zgc_grafik_x2";
+            this.zgc_grafik_x2.ScrollGrace = 0D;
+            this.zgc_grafik_x2.ScrollMaxX = 0D;
+            this.zgc_grafik_x2.ScrollMaxY = 0D;
+            this.zgc_grafik_x2.ScrollMaxY2 = 0D;
+            this.zgc_grafik_x2.ScrollMinX = 0D;
+            this.zgc_grafik_x2.ScrollMinY = 0D;
+            this.zgc_grafik_x2.ScrollMinY2 = 0D;
+            this.zgc_grafik_x2.Size = new System.Drawing.Size(338, 221);
+            this.zgc_grafik_x2.TabIndex = 3;
+            this.zgc_grafik_x2.UseExtendedPrintDialog = true;
+            this.zgc_grafik_x2.PointValueEvent += new ZedGraph.ZedGraphControl.PointValueHandler(this.zgc_grafikler_PointValueEvent);
+            this.zgc_grafik_x2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.zgc_grafikler_KeyPress);
+            this.zgc_grafik_x2.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.zgc_grafikler_MouseWheel);
             // 
-            // zgc_grafik_z
+            // splitContainer_yz
             // 
-            this.zgc_grafik_z.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.zgc_grafik_z.IsEnableHPan = false;
-            this.zgc_grafik_z.IsEnableHZoom = false;
-            this.zgc_grafik_z.IsEnableVPan = false;
-            this.zgc_grafik_z.IsEnableVZoom = false;
-            this.zgc_grafik_z.IsShowContextMenu = false;
-            this.zgc_grafik_z.IsShowPointValues = true;
-            this.zgc_grafik_z.Location = new System.Drawing.Point(0, 0);
-            this.zgc_grafik_z.Name = "zgc_grafik_z";
-            this.zgc_grafik_z.ScrollGrace = 0D;
-            this.zgc_grafik_z.ScrollMaxX = 0D;
-            this.zgc_grafik_z.ScrollMaxY = 0D;
-            this.zgc_grafik_z.ScrollMaxY2 = 0D;
-            this.zgc_grafik_z.ScrollMinX = 0D;
-            this.zgc_grafik_z.ScrollMinY = 0D;
-            this.zgc_grafik_z.ScrollMinY2 = 0D;
-            this.zgc_grafik_z.Size = new System.Drawing.Size(318, 464);
-            this.zgc_grafik_z.TabIndex = 9;
-            this.zgc_grafik_z.UseExtendedPrintDialog = true;
+            this.splitContainer_yz.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer_yz.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer_yz.Name = "splitContainer_yz";
             // 
-            // statusStrip1
+            // splitContainer_yz.Panel1
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.splitContainer_yz.Panel1.Controls.Add(this.splitContainer_y);
+            this.splitContainer_yz.Panel1MinSize = 0;
+            // 
+            // splitContainer_yz.Panel2
+            // 
+            this.splitContainer_yz.Panel2.Controls.Add(this.splitContainer_z);
+            this.splitContainer_yz.Panel2MinSize = 0;
+            this.splitContainer_yz.Size = new System.Drawing.Size(677, 464);
+            this.splitContainer_yz.SplitterDistance = 335;
+            this.splitContainer_yz.TabIndex = 0;
+            // 
+            // splitContainer_y
+            // 
+            this.splitContainer_y.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer_y.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer_y.Name = "splitContainer_y";
+            this.splitContainer_y.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer_y.Panel1
+            // 
+            this.splitContainer_y.Panel1.Controls.Add(this.zgc_grafik_y1);
+            this.splitContainer_y.Panel1MinSize = 0;
+            // 
+            // splitContainer_y.Panel2
+            // 
+            this.splitContainer_y.Panel2.Controls.Add(this.zgc_grafik_y2);
+            this.splitContainer_y.Panel2Collapsed = true;
+            this.splitContainer_y.Panel2MinSize = 0;
+            this.splitContainer_y.Size = new System.Drawing.Size(335, 464);
+            this.splitContainer_y.SplitterDistance = 239;
+            this.splitContainer_y.TabIndex = 0;
+            // 
+            // zgc_grafik_y1
+            // 
+            this.zgc_grafik_y1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zgc_grafik_y1.IsEnableHPan = false;
+            this.zgc_grafik_y1.IsEnableHZoom = false;
+            this.zgc_grafik_y1.IsEnableVPan = false;
+            this.zgc_grafik_y1.IsEnableVZoom = false;
+            this.zgc_grafik_y1.IsShowContextMenu = false;
+            this.zgc_grafik_y1.IsShowPointValues = true;
+            this.zgc_grafik_y1.Location = new System.Drawing.Point(0, 0);
+            this.zgc_grafik_y1.Name = "zgc_grafik_y1";
+            this.zgc_grafik_y1.ScrollGrace = 0D;
+            this.zgc_grafik_y1.ScrollMaxX = 0D;
+            this.zgc_grafik_y1.ScrollMaxY = 0D;
+            this.zgc_grafik_y1.ScrollMaxY2 = 0D;
+            this.zgc_grafik_y1.ScrollMinX = 0D;
+            this.zgc_grafik_y1.ScrollMinY = 0D;
+            this.zgc_grafik_y1.ScrollMinY2 = 0D;
+            this.zgc_grafik_y1.Size = new System.Drawing.Size(335, 464);
+            this.zgc_grafik_y1.TabIndex = 1;
+            this.zgc_grafik_y1.UseExtendedPrintDialog = true;
+            this.zgc_grafik_y1.PointValueEvent += new ZedGraph.ZedGraphControl.PointValueHandler(this.zgc_grafikler_PointValueEvent);
+            this.zgc_grafik_y1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.zgc_grafikler_KeyPress);
+            this.zgc_grafik_y1.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.zgc_grafikler_MouseWheel);
+            // 
+            // zgc_grafik_y2
+            // 
+            this.zgc_grafik_y2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zgc_grafik_y2.IsEnableHPan = false;
+            this.zgc_grafik_y2.IsEnableHZoom = false;
+            this.zgc_grafik_y2.IsEnableVPan = false;
+            this.zgc_grafik_y2.IsEnableVZoom = false;
+            this.zgc_grafik_y2.IsShowContextMenu = false;
+            this.zgc_grafik_y2.IsShowPointValues = true;
+            this.zgc_grafik_y2.Location = new System.Drawing.Point(0, 0);
+            this.zgc_grafik_y2.Name = "zgc_grafik_y2";
+            this.zgc_grafik_y2.ScrollGrace = 0D;
+            this.zgc_grafik_y2.ScrollMaxX = 0D;
+            this.zgc_grafik_y2.ScrollMaxY = 0D;
+            this.zgc_grafik_y2.ScrollMaxY2 = 0D;
+            this.zgc_grafik_y2.ScrollMinX = 0D;
+            this.zgc_grafik_y2.ScrollMinY = 0D;
+            this.zgc_grafik_y2.ScrollMinY2 = 0D;
+            this.zgc_grafik_y2.Size = new System.Drawing.Size(337, 221);
+            this.zgc_grafik_y2.TabIndex = 4;
+            this.zgc_grafik_y2.UseExtendedPrintDialog = true;
+            this.zgc_grafik_y2.PointValueEvent += new ZedGraph.ZedGraphControl.PointValueHandler(this.zgc_grafikler_PointValueEvent);
+            this.zgc_grafik_y2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.zgc_grafikler_KeyPress);
+            this.zgc_grafik_y2.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.zgc_grafikler_MouseWheel);
+            // 
+            // splitContainer_z
+            // 
+            this.splitContainer_z.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer_z.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer_z.Name = "splitContainer_z";
+            this.splitContainer_z.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer_z.Panel1
+            // 
+            this.splitContainer_z.Panel1.Controls.Add(this.zgc_grafik_z1);
+            this.splitContainer_z.Panel1MinSize = 0;
+            // 
+            // splitContainer_z.Panel2
+            // 
+            this.splitContainer_z.Panel2.Controls.Add(this.zgc_grafik_z2);
+            this.splitContainer_z.Panel2Collapsed = true;
+            this.splitContainer_z.Panel2MinSize = 0;
+            this.splitContainer_z.Size = new System.Drawing.Size(338, 464);
+            this.splitContainer_z.SplitterDistance = 238;
+            this.splitContainer_z.TabIndex = 0;
+            // 
+            // zgc_grafik_z1
+            // 
+            this.zgc_grafik_z1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zgc_grafik_z1.IsEnableHPan = false;
+            this.zgc_grafik_z1.IsEnableHZoom = false;
+            this.zgc_grafik_z1.IsEnableVPan = false;
+            this.zgc_grafik_z1.IsEnableVZoom = false;
+            this.zgc_grafik_z1.IsShowContextMenu = false;
+            this.zgc_grafik_z1.IsShowPointValues = true;
+            this.zgc_grafik_z1.Location = new System.Drawing.Point(0, 0);
+            this.zgc_grafik_z1.Name = "zgc_grafik_z1";
+            this.zgc_grafik_z1.ScrollGrace = 0D;
+            this.zgc_grafik_z1.ScrollMaxX = 0D;
+            this.zgc_grafik_z1.ScrollMaxY = 0D;
+            this.zgc_grafik_z1.ScrollMaxY2 = 0D;
+            this.zgc_grafik_z1.ScrollMinX = 0D;
+            this.zgc_grafik_z1.ScrollMinY = 0D;
+            this.zgc_grafik_z1.ScrollMinY2 = 0D;
+            this.zgc_grafik_z1.Size = new System.Drawing.Size(338, 464);
+            this.zgc_grafik_z1.TabIndex = 2;
+            this.zgc_grafik_z1.UseExtendedPrintDialog = true;
+            this.zgc_grafik_z1.PointValueEvent += new ZedGraph.ZedGraphControl.PointValueHandler(this.zgc_grafikler_PointValueEvent);
+            this.zgc_grafik_z1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.zgc_grafikler_KeyPress);
+            this.zgc_grafik_z1.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.zgc_grafikler_MouseWheel);
+            // 
+            // zgc_grafik_z2
+            // 
+            this.zgc_grafik_z2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zgc_grafik_z2.IsEnableHPan = false;
+            this.zgc_grafik_z2.IsEnableHZoom = false;
+            this.zgc_grafik_z2.IsEnableVPan = false;
+            this.zgc_grafik_z2.IsEnableVZoom = false;
+            this.zgc_grafik_z2.IsShowContextMenu = false;
+            this.zgc_grafik_z2.IsShowPointValues = true;
+            this.zgc_grafik_z2.Location = new System.Drawing.Point(0, 0);
+            this.zgc_grafik_z2.Name = "zgc_grafik_z2";
+            this.zgc_grafik_z2.ScrollGrace = 0D;
+            this.zgc_grafik_z2.ScrollMaxX = 0D;
+            this.zgc_grafik_z2.ScrollMaxY = 0D;
+            this.zgc_grafik_z2.ScrollMaxY2 = 0D;
+            this.zgc_grafik_z2.ScrollMinX = 0D;
+            this.zgc_grafik_z2.ScrollMinY = 0D;
+            this.zgc_grafik_z2.ScrollMinY2 = 0D;
+            this.zgc_grafik_z2.Size = new System.Drawing.Size(340, 222);
+            this.zgc_grafik_z2.TabIndex = 5;
+            this.zgc_grafik_z2.UseExtendedPrintDialog = true;
+            this.zgc_grafik_z2.PointValueEvent += new ZedGraph.ZedGraphControl.PointValueHandler(this.zgc_grafikler_PointValueEvent);
+            this.zgc_grafik_z2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.zgc_grafikler_KeyPress);
+            this.zgc_grafik_z2.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.zgc_grafikler_MouseWheel);
+            // 
+            // statusStrip_DurumÇubuğu
+            // 
+            this.statusStrip_DurumÇubuğu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel_Durum});
-            this.statusStrip1.Location = new System.Drawing.Point(3, 492);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(962, 22);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 9;
-            this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip_DurumÇubuğu.Location = new System.Drawing.Point(3, 492);
+            this.statusStrip_DurumÇubuğu.Name = "statusStrip_DurumÇubuğu";
+            this.statusStrip_DurumÇubuğu.Size = new System.Drawing.Size(1017, 22);
+            this.statusStrip_DurumÇubuğu.SizingGrip = false;
+            this.statusStrip_DurumÇubuğu.TabIndex = 9;
+            this.statusStrip_DurumÇubuğu.Text = "Durum Çubuğu";
             // 
             // toolStripStatusLabel_Durum
             // 
             this.toolStripStatusLabel_Durum.Name = "toolStripStatusLabel_Durum";
-            this.toolStripStatusLabel_Durum.Size = new System.Drawing.Size(37, 17);
-            this.toolStripStatusLabel_Durum.Text = "Hazır.";
+            this.toolStripStatusLabel_Durum.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel_Durum.Text = "Ready.";
             // 
-            // toolStrip1
+            // toolStrip_AraçÇubuğu
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.Gainsboro;
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStrip_AraçÇubuğu.BackColor = System.Drawing.Color.Gainsboro;
+            this.toolStrip_AraçÇubuğu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip_AraçÇubuğu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel_SeriPort,
             this.toolStripComboBox_SeriPortlar,
             this.toolStripSeparator1,
@@ -242,18 +443,27 @@
             this.toolStripSeparator3,
             this.toolStripButton_GerçekZaman,
             this.toolStripSeparator4,
-            this.toolStripButton_Arabellek});
-            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(962, 25);
-            this.toolStrip1.TabIndex = 8;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolStripButton_Arabellek,
+            this.toolStripSeparator5,
+            this.toolStripSplitButton_XEkseni,
+            this.toolStripSeparator6,
+            this.toolStripSplitButton_YEkseni,
+            this.toolStripSeparator7,
+            this.toolStripSplitButton_ZEkseni,
+            this.toolStripSeparator8,
+            this.toolStripButton_Restore,
+            this.toolStripButton_RealTime});
+            this.toolStrip_AraçÇubuğu.Location = new System.Drawing.Point(3, 3);
+            this.toolStrip_AraçÇubuğu.Name = "toolStrip_AraçÇubuğu";
+            this.toolStrip_AraçÇubuğu.Size = new System.Drawing.Size(1017, 25);
+            this.toolStrip_AraçÇubuğu.TabIndex = 8;
+            this.toolStrip_AraçÇubuğu.Text = "Araç Çubuğu";
             // 
             // toolStripLabel_SeriPort
             // 
             this.toolStripLabel_SeriPort.Name = "toolStripLabel_SeriPort";
-            this.toolStripLabel_SeriPort.Size = new System.Drawing.Size(57, 22);
-            this.toolStripLabel_SeriPort.Text = "Seri Port :";
+            this.toolStripLabel_SeriPort.Size = new System.Drawing.Size(66, 22);
+            this.toolStripLabel_SeriPort.Text = "Serial Port :";
             // 
             // toolStripComboBox_SeriPortlar
             // 
@@ -296,8 +506,8 @@
             this.toolStripButton_SeriPort.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_SeriPort.Image")));
             this.toolStripButton_SeriPort.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_SeriPort.Name = "toolStripButton_SeriPort";
-            this.toolStripButton_SeriPort.Size = new System.Drawing.Size(72, 22);
-            this.toolStripButton_SeriPort.Text = "Seri Port Aç";
+            this.toolStripButton_SeriPort.Size = new System.Drawing.Size(96, 22);
+            this.toolStripButton_SeriPort.Text = "Open Serial Port";
             this.toolStripButton_SeriPort.Click += new System.EventHandler(this.toolStripButton_SeriPort_Click);
             // 
             // toolStripSeparator3
@@ -307,15 +517,12 @@
             // 
             // toolStripButton_GerçekZaman
             // 
-            this.toolStripButton_GerçekZaman.Checked = true;
             this.toolStripButton_GerçekZaman.CheckOnClick = true;
-            this.toolStripButton_GerçekZaman.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripButton_GerçekZaman.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton_GerçekZaman.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_GerçekZaman.Image")));
-            this.toolStripButton_GerçekZaman.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_GerçekZaman.Enabled = false;
             this.toolStripButton_GerçekZaman.Name = "toolStripButton_GerçekZaman";
-            this.toolStripButton_GerçekZaman.Size = new System.Drawing.Size(87, 22);
-            this.toolStripButton_GerçekZaman.Text = "Gerçek Zaman";
+            this.toolStripButton_GerçekZaman.Size = new System.Drawing.Size(105, 22);
+            this.toolStripButton_GerçekZaman.Text = "Focus to Realtime";
             this.toolStripButton_GerçekZaman.Click += new System.EventHandler(this.toolStripButton_GerçekZaman_Click);
             // 
             // toolStripSeparator4
@@ -330,56 +537,392 @@
             this.toolStripButton_Arabellek.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_Arabellek.Image")));
             this.toolStripButton_Arabellek.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_Arabellek.Name = "toolStripButton_Arabellek";
-            this.toolStripButton_Arabellek.Size = new System.Drawing.Size(96, 22);
-            this.toolStripButton_Arabellek.Text = "Arabelleği Sıfırla";
+            this.toolStripButton_Arabellek.Size = new System.Drawing.Size(98, 22);
+            this.toolStripButton_Arabellek.Text = "Discard In Buffer";
             this.toolStripButton_Arabellek.Click += new System.EventHandler(this.toolStripButton_Arabellek_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSplitButton_XEkseni
+            // 
+            this.toolStripSplitButton_XEkseni.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripSplitButton_XEkseni.DoubleClickEnabled = true;
+            this.toolStripSplitButton_XEkseni.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_AutoScaleX,
+            this.toolStripTextBox_Xmax,
+            this.toolStripTextBox_Xmin,
+            this.toolStripMenuItem_ResetX,
+            this.toolStripMenuItem_ComparisonX});
+            this.toolStripSplitButton_XEkseni.Enabled = false;
+            this.toolStripSplitButton_XEkseni.Name = "toolStripSplitButton_XEkseni";
+            this.toolStripSplitButton_XEkseni.Size = new System.Drawing.Size(99, 22);
+            this.toolStripSplitButton_XEkseni.Text = "X Axis Settings";
+            this.toolStripSplitButton_XEkseni.ButtonClick += new System.EventHandler(this.toolStripSplitButton_XEkseni_ButtonClick);
+            this.toolStripSplitButton_XEkseni.ButtonDoubleClick += new System.EventHandler(this.toolStripSplitButton_XEkseni_ButtonDoubleClick);
+            this.toolStripSplitButton_XEkseni.DropDownClosed += new System.EventHandler(this.toolStripSplitButton_XEkseni_DropDownClosed);
+            // 
+            // toolStripMenuItem_AutoScaleX
+            // 
+            this.toolStripMenuItem_AutoScaleX.Checked = true;
+            this.toolStripMenuItem_AutoScaleX.CheckOnClick = true;
+            this.toolStripMenuItem_AutoScaleX.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItem_AutoScaleX.Name = "toolStripMenuItem_AutoScaleX";
+            this.toolStripMenuItem_AutoScaleX.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_AutoScaleX.Text = "Auto Scale";
+            this.toolStripMenuItem_AutoScaleX.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_AutoScaleX_CheckedChanged);
+            // 
+            // toolStripTextBox_Xmax
+            // 
+            this.toolStripTextBox_Xmax.MaxLength = 4;
+            this.toolStripTextBox_Xmax.Name = "toolStripTextBox_Xmax";
+            this.toolStripTextBox_Xmax.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox_Xmax.Text = "180";
+            this.toolStripTextBox_Xmax.ToolTipText = "Xmax";
+            // 
+            // toolStripTextBox_Xmin
+            // 
+            this.toolStripTextBox_Xmin.MaxLength = 4;
+            this.toolStripTextBox_Xmin.Name = "toolStripTextBox_Xmin";
+            this.toolStripTextBox_Xmin.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox_Xmin.Text = "-180";
+            this.toolStripTextBox_Xmin.ToolTipText = "Xmin";
+            // 
+            // toolStripMenuItem_ResetX
+            // 
+            this.toolStripMenuItem_ResetX.Name = "toolStripMenuItem_ResetX";
+            this.toolStripMenuItem_ResetX.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_ResetX.Text = "Reset Graph";
+            this.toolStripMenuItem_ResetX.Click += new System.EventHandler(this.toolStripMenuItem_ResetX_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSplitButton_YEkseni
+            // 
+            this.toolStripSplitButton_YEkseni.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripSplitButton_YEkseni.DoubleClickEnabled = true;
+            this.toolStripSplitButton_YEkseni.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_AutoScaleY,
+            this.toolStripTextBox_Ymax,
+            this.toolStripTextBox_Ymin,
+            this.toolStripMenuItem_ResetY,
+            this.toolStripMenuItem_ComparisonY});
+            this.toolStripSplitButton_YEkseni.Enabled = false;
+            this.toolStripSplitButton_YEkseni.Name = "toolStripSplitButton_YEkseni";
+            this.toolStripSplitButton_YEkseni.Size = new System.Drawing.Size(99, 22);
+            this.toolStripSplitButton_YEkseni.Text = "Y Axis Settings";
+            this.toolStripSplitButton_YEkseni.ButtonClick += new System.EventHandler(this.toolStripSplitButton_YEkseni_ButtonClick);
+            this.toolStripSplitButton_YEkseni.ButtonDoubleClick += new System.EventHandler(this.toolStripSplitButton_YEkseni_ButtonDoubleClick);
+            this.toolStripSplitButton_YEkseni.DropDownClosed += new System.EventHandler(this.toolStripSplitButton_YEkseni_DropDownClosed);
+            // 
+            // toolStripMenuItem_AutoScaleY
+            // 
+            this.toolStripMenuItem_AutoScaleY.Checked = true;
+            this.toolStripMenuItem_AutoScaleY.CheckOnClick = true;
+            this.toolStripMenuItem_AutoScaleY.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItem_AutoScaleY.Name = "toolStripMenuItem_AutoScaleY";
+            this.toolStripMenuItem_AutoScaleY.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_AutoScaleY.Text = "Auto Scale";
+            this.toolStripMenuItem_AutoScaleY.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_AutoScaleY_CheckedChanged);
+            // 
+            // toolStripTextBox_Ymax
+            // 
+            this.toolStripTextBox_Ymax.MaxLength = 4;
+            this.toolStripTextBox_Ymax.Name = "toolStripTextBox_Ymax";
+            this.toolStripTextBox_Ymax.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox_Ymax.Text = "180";
+            this.toolStripTextBox_Ymax.ToolTipText = "Ymax";
+            // 
+            // toolStripTextBox_Ymin
+            // 
+            this.toolStripTextBox_Ymin.MaxLength = 4;
+            this.toolStripTextBox_Ymin.Name = "toolStripTextBox_Ymin";
+            this.toolStripTextBox_Ymin.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox_Ymin.Text = "-180";
+            this.toolStripTextBox_Ymin.ToolTipText = "Ymin";
+            // 
+            // toolStripMenuItem_ResetY
+            // 
+            this.toolStripMenuItem_ResetY.Name = "toolStripMenuItem_ResetY";
+            this.toolStripMenuItem_ResetY.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_ResetY.Text = "Reset Graph";
+            this.toolStripMenuItem_ResetY.Click += new System.EventHandler(this.toolStripMenuItem_ResetY_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSplitButton_ZEkseni
+            // 
+            this.toolStripSplitButton_ZEkseni.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripSplitButton_ZEkseni.DoubleClickEnabled = true;
+            this.toolStripSplitButton_ZEkseni.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem_AutoScaleZ,
+            this.toolStripTextBox_Zmax,
+            this.toolStripTextBox_Zmin,
+            this.toolStripMenuItem_ResetZ,
+            this.toolStripMenuItem_ComparisonZ});
+            this.toolStripSplitButton_ZEkseni.Enabled = false;
+            this.toolStripSplitButton_ZEkseni.Name = "toolStripSplitButton_ZEkseni";
+            this.toolStripSplitButton_ZEkseni.Size = new System.Drawing.Size(99, 22);
+            this.toolStripSplitButton_ZEkseni.Text = "Z Axis Settings";
+            this.toolStripSplitButton_ZEkseni.ButtonClick += new System.EventHandler(this.toolStripSplitButton_ZEkseni_ButtonClick);
+            this.toolStripSplitButton_ZEkseni.ButtonDoubleClick += new System.EventHandler(this.toolStripSplitButton_ZEkseni_ButtonDoubleClick);
+            this.toolStripSplitButton_ZEkseni.DropDownClosed += new System.EventHandler(this.toolStripSplitButton_ZEkseni_DropDownClosed);
+            // 
+            // toolStripMenuItem_AutoScaleZ
+            // 
+            this.toolStripMenuItem_AutoScaleZ.Checked = true;
+            this.toolStripMenuItem_AutoScaleZ.CheckOnClick = true;
+            this.toolStripMenuItem_AutoScaleZ.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItem_AutoScaleZ.Name = "toolStripMenuItem_AutoScaleZ";
+            this.toolStripMenuItem_AutoScaleZ.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_AutoScaleZ.Text = "Auto Scale";
+            this.toolStripMenuItem_AutoScaleZ.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_AutoScaleZ_CheckedChanged);
+            // 
+            // toolStripTextBox_Zmax
+            // 
+            this.toolStripTextBox_Zmax.MaxLength = 4;
+            this.toolStripTextBox_Zmax.Name = "toolStripTextBox_Zmax";
+            this.toolStripTextBox_Zmax.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox_Zmax.Text = "180";
+            this.toolStripTextBox_Zmax.ToolTipText = "Zmax";
+            // 
+            // toolStripTextBox_Zmin
+            // 
+            this.toolStripTextBox_Zmin.MaxLength = 4;
+            this.toolStripTextBox_Zmin.Name = "toolStripTextBox_Zmin";
+            this.toolStripTextBox_Zmin.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox_Zmin.Text = "-180";
+            this.toolStripTextBox_Zmin.ToolTipText = "Zmin";
+            // 
+            // toolStripMenuItem_ResetZ
+            // 
+            this.toolStripMenuItem_ResetZ.Name = "toolStripMenuItem_ResetZ";
+            this.toolStripMenuItem_ResetZ.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_ResetZ.Text = "Reset Graph";
+            this.toolStripMenuItem_ResetZ.Click += new System.EventHandler(this.toolStripMenuItem_ResetZ_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton_Restore
+            // 
+            this.toolStripButton_Restore.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton_Restore.Enabled = false;
+            this.toolStripButton_Restore.Name = "toolStripButton_Restore";
+            this.toolStripButton_Restore.Size = new System.Drawing.Size(78, 22);
+            this.toolStripButton_Restore.Text = "Restore View";
+            this.toolStripButton_Restore.Click += new System.EventHandler(this.toolStripButton_Restore_Click);
+            // 
+            // toolStripButton_RealTime
+            // 
+            this.toolStripButton_RealTime.Checked = true;
+            this.toolStripButton_RealTime.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripButton_RealTime.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton_RealTime.Enabled = false;
+            this.toolStripButton_RealTime.Name = "toolStripButton_RealTime";
+            this.toolStripButton_RealTime.Size = new System.Drawing.Size(23, 22);
             // 
             // tabPage_SeriPort
             // 
-            this.tabPage_SeriPort.Controls.Add(this.propertyGrid1);
+            this.tabPage_SeriPort.Controls.Add(this.groupBox_about);
+            this.tabPage_SeriPort.Controls.Add(this.groupBox_Graphic);
+            this.tabPage_SeriPort.Controls.Add(this.groupBox_seriport);
             this.tabPage_SeriPort.Location = new System.Drawing.Point(4, 22);
             this.tabPage_SeriPort.Name = "tabPage_SeriPort";
             this.tabPage_SeriPort.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_SeriPort.Size = new System.Drawing.Size(967, 517);
+            this.tabPage_SeriPort.Size = new System.Drawing.Size(1023, 517);
             this.tabPage_SeriPort.TabIndex = 2;
-            this.tabPage_SeriPort.Text = "Seri Port Ayarları";
+            this.tabPage_SeriPort.Text = "Serial Port Settings";
             this.tabPage_SeriPort.UseVisualStyleBackColor = true;
             // 
-            // propertyGrid1
+            // propertyGrid_seriport
             // 
-            this.propertyGrid1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.propertyGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.propertyGrid1.Location = new System.Drawing.Point(3, 3);
-            this.propertyGrid1.Name = "propertyGrid1";
-            this.propertyGrid1.SelectedObject = this.seriPort;
-            this.propertyGrid1.Size = new System.Drawing.Size(358, 511);
-            this.propertyGrid1.TabIndex = 10;
-            this.propertyGrid1.ToolbarVisible = false;
+            this.propertyGrid_seriport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propertyGrid_seriport.Location = new System.Drawing.Point(3, 16);
+            this.propertyGrid_seriport.Name = "propertyGrid_seriport";
+            this.propertyGrid_seriport.PropertySort = System.Windows.Forms.PropertySort.NoSort;
+            this.propertyGrid_seriport.SelectedObject = this.seriPort;
+            this.propertyGrid_seriport.Size = new System.Drawing.Size(281, 492);
+            this.propertyGrid_seriport.TabIndex = 10;
+            this.propertyGrid_seriport.ToolbarVisible = false;
+            // 
+            // toolStripMenuItem_ComparisonX
+            // 
+            this.toolStripMenuItem_ComparisonX.CheckOnClick = true;
+            this.toolStripMenuItem_ComparisonX.Name = "toolStripMenuItem_ComparisonX";
+            this.toolStripMenuItem_ComparisonX.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_ComparisonX.Text = "Comparison Mode";
+            this.toolStripMenuItem_ComparisonX.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_ComparisonX_CheckedChanged);
+            // 
+            // toolStripMenuItem_ComparisonY
+            // 
+            this.toolStripMenuItem_ComparisonY.CheckOnClick = true;
+            this.toolStripMenuItem_ComparisonY.Name = "toolStripMenuItem_ComparisonY";
+            this.toolStripMenuItem_ComparisonY.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_ComparisonY.Text = "Comparison Mode";
+            this.toolStripMenuItem_ComparisonY.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_ComparisonY_CheckedChanged);
+            // 
+            // toolStripMenuItem_ComparisonZ
+            // 
+            this.toolStripMenuItem_ComparisonZ.CheckOnClick = true;
+            this.toolStripMenuItem_ComparisonZ.Name = "toolStripMenuItem_ComparisonZ";
+            this.toolStripMenuItem_ComparisonZ.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_ComparisonZ.Text = "Comparison Mode";
+            this.toolStripMenuItem_ComparisonZ.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_ComparisonZ_CheckedChanged);
+            // 
+            // groupBox_seriport
+            // 
+            this.groupBox_seriport.Controls.Add(this.propertyGrid_seriport);
+            this.groupBox_seriport.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox_seriport.Location = new System.Drawing.Point(3, 3);
+            this.groupBox_seriport.Name = "groupBox_seriport";
+            this.groupBox_seriport.Size = new System.Drawing.Size(287, 511);
+            this.groupBox_seriport.TabIndex = 11;
+            this.groupBox_seriport.TabStop = false;
+            this.groupBox_seriport.Text = "Serial Port Properties";
+            // 
+            // groupBox_Graphic
+            // 
+            this.groupBox_Graphic.Controls.Add(this.comboBox_Symbol);
+            this.groupBox_Graphic.Controls.Add(this.label_symbol);
+            this.groupBox_Graphic.Controls.Add(this.button_color);
+            this.groupBox_Graphic.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox_Graphic.Location = new System.Drawing.Point(290, 3);
+            this.groupBox_Graphic.Name = "groupBox_Graphic";
+            this.groupBox_Graphic.Size = new System.Drawing.Size(256, 511);
+            this.groupBox_Graphic.TabIndex = 12;
+            this.groupBox_Graphic.TabStop = false;
+            this.groupBox_Graphic.Text = "Graphic Settings";
+            // 
+            // button_color
+            // 
+            this.button_color.Location = new System.Drawing.Point(6, 24);
+            this.button_color.Name = "button_color";
+            this.button_color.Size = new System.Drawing.Size(105, 32);
+            this.button_color.TabIndex = 0;
+            this.button_color.Text = "Change Data Color";
+            this.button_color.UseVisualStyleBackColor = true;
+            this.button_color.Click += new System.EventHandler(this.button_color_Click);
+            // 
+            // label_symbol
+            // 
+            this.label_symbol.AutoSize = true;
+            this.label_symbol.Location = new System.Drawing.Point(126, 18);
+            this.label_symbol.Name = "label_symbol";
+            this.label_symbol.Size = new System.Drawing.Size(116, 13);
+            this.label_symbol.TabIndex = 1;
+            this.label_symbol.Text = "Change Data Symbol : ";
+            // 
+            // comboBox_Symbol
+            // 
+            this.comboBox_Symbol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_Symbol.FormattingEnabled = true;
+            this.comboBox_Symbol.Items.AddRange(new object[] {
+            "Square",
+            "Diamond",
+            "Triangle",
+            "Circle",
+            "XCross",
+            "Plus",
+            "Star",
+            "TriangleDown",
+            "HDash",
+            "VDash",
+            "None"});
+            this.comboBox_Symbol.Location = new System.Drawing.Point(127, 34);
+            this.comboBox_Symbol.Name = "comboBox_Symbol";
+            this.comboBox_Symbol.Size = new System.Drawing.Size(115, 21);
+            this.comboBox_Symbol.TabIndex = 2;
+            this.comboBox_Symbol.SelectedIndexChanged += new System.EventHandler(this.comboBox_Symbol_SelectedIndexChanged);
+            // 
+            // groupBox_about
+            // 
+            this.groupBox_about.Controls.Add(this.label_about);
+            this.groupBox_about.Controls.Add(this.pictureBox_ytu);
+            this.groupBox_about.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox_about.Location = new System.Drawing.Point(546, 3);
+            this.groupBox_about.Name = "groupBox_about";
+            this.groupBox_about.Size = new System.Drawing.Size(474, 511);
+            this.groupBox_about.TabIndex = 13;
+            this.groupBox_about.TabStop = false;
+            this.groupBox_about.Text = "About";
+            // 
+            // pictureBox_ytu
+            // 
+            this.pictureBox_ytu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_ytu.Image")));
+            this.pictureBox_ytu.Location = new System.Drawing.Point(103, 16);
+            this.pictureBox_ytu.Name = "pictureBox_ytu";
+            this.pictureBox_ytu.Size = new System.Drawing.Size(272, 256);
+            this.pictureBox_ytu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_ytu.TabIndex = 0;
+            this.pictureBox_ytu.TabStop = false;
+            // 
+            // label_about
+            // 
+            this.label_about.AutoSize = true;
+            this.label_about.Location = new System.Drawing.Point(18, 282);
+            this.label_about.Name = "label_about";
+            this.label_about.Size = new System.Drawing.Size(357, 91);
+            this.label_about.TabIndex = 1;
+            this.label_about.Text = "This program is written for presentation of KOM3151 Mechatronics Project.\r\n\r\nTeam" +
+    " Members:\r\n\r\nYasin COŞGUN\r\nMurat YAPICI\r\nKadircan KURTULUŞ";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 543);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(1031, 543);
+            this.Controls.Add(this.tabControl_sekmeler);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1047, 39);
             this.Name = "Form1";
-            this.Text = "Mekatronik Projesi";
-            this.tabControl1.ResumeLayout(false);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Mechatronics Project";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.tabControl_sekmeler.ResumeLayout(false);
             this.tabPage_Grafik.ResumeLayout(false);
             this.tabPage_Grafik.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.splitContainer_xyz.Panel1.ResumeLayout(false);
+            this.splitContainer_xyz.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer_xyz)).EndInit();
+            this.splitContainer_xyz.ResumeLayout(false);
+            this.splitContainer_x.Panel1.ResumeLayout(false);
+            this.splitContainer_x.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer_x)).EndInit();
+            this.splitContainer_x.ResumeLayout(false);
+            this.splitContainer_yz.Panel1.ResumeLayout(false);
+            this.splitContainer_yz.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer_yz)).EndInit();
+            this.splitContainer_yz.ResumeLayout(false);
+            this.splitContainer_y.Panel1.ResumeLayout(false);
+            this.splitContainer_y.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer_y)).EndInit();
+            this.splitContainer_y.ResumeLayout(false);
+            this.splitContainer_z.Panel1.ResumeLayout(false);
+            this.splitContainer_z.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer_z)).EndInit();
+            this.splitContainer_z.ResumeLayout(false);
+            this.statusStrip_DurumÇubuğu.ResumeLayout(false);
+            this.statusStrip_DurumÇubuğu.PerformLayout();
+            this.toolStrip_AraçÇubuğu.ResumeLayout(false);
+            this.toolStrip_AraçÇubuğu.PerformLayout();
             this.tabPage_SeriPort.ResumeLayout(false);
+            this.groupBox_seriport.ResumeLayout(false);
+            this.groupBox_Graphic.ResumeLayout(false);
+            this.groupBox_Graphic.PerformLayout();
+            this.groupBox_about.ResumeLayout(false);
+            this.groupBox_about.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ytu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -387,9 +930,9 @@
         #endregion
         private System.IO.Ports.SerialPort seriPort;
         private System.ComponentModel.BackgroundWorker backgroundWorker_Güncelle;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControl_sekmeler;
         private System.Windows.Forms.TabPage tabPage_Grafik;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip toolStrip_AraçÇubuğu;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox_SeriPortlar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel_SeriPort;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -398,18 +941,57 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton_SeriPort;
         private System.Windows.Forms.TabPage tabPage_SeriPort;
-        private System.Windows.Forms.PropertyGrid propertyGrid1;
+        private System.Windows.Forms.PropertyGrid propertyGrid_seriport;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripButton_Arabellek;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip statusStrip_DurumÇubuğu;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_Durum;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private ZedGraph.ZedGraphControl zgc_grafik_x;
-        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.SplitContainer splitContainer_xyz;
+        private System.Windows.Forms.SplitContainer splitContainer_yz;
         private System.Windows.Forms.ToolStripButton toolStripButton_GerçekZaman;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private ZedGraph.ZedGraphControl zgc_grafik_y;
-        private ZedGraph.ZedGraphControl zgc_grafik_z;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton_XEkseni;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_AutoScaleX;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox_Xmax;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox_Xmin;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton_YEkseni;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_AutoScaleY;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox_Ymax;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox_Ymin;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton_ZEkseni;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_AutoScaleZ;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox_Zmax;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox_Zmin;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripButton toolStripButton_RealTime;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Restore;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ResetX;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ResetY;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ResetZ;
+        private System.Windows.Forms.SplitContainer splitContainer_x;
+        private System.Windows.Forms.SplitContainer splitContainer_y;
+        private System.Windows.Forms.SplitContainer splitContainer_z;
+        private ZedGraph.ZedGraphControl zgc_grafik_x1;
+        private ZedGraph.ZedGraphControl zgc_grafik_y1;
+        private ZedGraph.ZedGraphControl zgc_grafik_z1;
+        private ZedGraph.ZedGraphControl zgc_grafik_x2;
+        private ZedGraph.ZedGraphControl zgc_grafik_y2;
+        private ZedGraph.ZedGraphControl zgc_grafik_z2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ComparisonX;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ComparisonY;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem_ComparisonZ;
+        private System.Windows.Forms.GroupBox groupBox_seriport;
+        private System.Windows.Forms.GroupBox groupBox_Graphic;
+        private System.Windows.Forms.ColorDialog colorDialog_veri;
+        private System.Windows.Forms.Button button_color;
+        private System.Windows.Forms.ComboBox comboBox_Symbol;
+        private System.Windows.Forms.Label label_symbol;
+        private System.Windows.Forms.GroupBox groupBox_about;
+        private System.Windows.Forms.PictureBox pictureBox_ytu;
+        private System.Windows.Forms.Label label_about;
     }
 }
 
