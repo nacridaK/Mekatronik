@@ -85,6 +85,7 @@
             this.toolStripButton_RealTime = new System.Windows.Forms.ToolStripButton();
             this.tabPage_Ayarlar = new System.Windows.Forms.TabPage();
             this.groupBox_about = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_about = new System.Windows.Forms.Label();
             this.pictureBox_ytu = new System.Windows.Forms.PictureBox();
             this.groupBox_Graphic = new System.Windows.Forms.GroupBox();
@@ -94,7 +95,6 @@
             this.groupBox_seriport = new System.Windows.Forms.GroupBox();
             this.propertyGrid_seriport = new System.Windows.Forms.PropertyGrid();
             this.colorDialog_veri = new System.Windows.Forms.ColorDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl_sekmeler.SuspendLayout();
             this.tabPage_Grafik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer_xyz)).BeginInit();
@@ -121,10 +121,10 @@
             this.toolStrip_AraçÇubuğu.SuspendLayout();
             this.tabPage_Ayarlar.SuspendLayout();
             this.groupBox_about.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ytu)).BeginInit();
             this.groupBox_Graphic.SuspendLayout();
             this.groupBox_seriport.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // seriPort
@@ -165,6 +165,7 @@
             // splitContainer_xyz
             // 
             this.splitContainer_xyz.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer_xyz.Enabled = false;
             this.splitContainer_xyz.Location = new System.Drawing.Point(3, 28);
             this.splitContainer_xyz.Name = "splitContainer_xyz";
             // 
@@ -784,6 +785,16 @@
             this.groupBox_about.TabStop = false;
             this.groupBox_about.Text = "About";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 317);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(268, 103);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // label_about
             // 
             this.label_about.AutoSize = true;
@@ -809,6 +820,7 @@
             this.groupBox_Graphic.Controls.Add(this.label_symbol);
             this.groupBox_Graphic.Controls.Add(this.button_color);
             this.groupBox_Graphic.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox_Graphic.Enabled = false;
             this.groupBox_Graphic.Location = new System.Drawing.Point(290, 3);
             this.groupBox_Graphic.Name = "groupBox_Graphic";
             this.groupBox_Graphic.Size = new System.Drawing.Size(256, 511);
@@ -861,6 +873,7 @@
             // 
             this.groupBox_seriport.Controls.Add(this.propertyGrid_seriport);
             this.groupBox_seriport.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox_seriport.Enabled = false;
             this.groupBox_seriport.Location = new System.Drawing.Point(3, 3);
             this.groupBox_seriport.Name = "groupBox_seriport";
             this.groupBox_seriport.Size = new System.Drawing.Size(287, 511);
@@ -878,16 +891,6 @@
             this.propertyGrid_seriport.Size = new System.Drawing.Size(281, 492);
             this.propertyGrid_seriport.TabIndex = 10;
             this.propertyGrid_seriport.ToolbarVisible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 317);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(268, 103);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -931,11 +934,11 @@
             this.tabPage_Ayarlar.ResumeLayout(false);
             this.groupBox_about.ResumeLayout(false);
             this.groupBox_about.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ytu)).EndInit();
             this.groupBox_Graphic.ResumeLayout(false);
             this.groupBox_Graphic.PerformLayout();
             this.groupBox_seriport.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

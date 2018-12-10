@@ -163,7 +163,10 @@ namespace Mekatronik_Projesi
             toolStripSplitButton_XEkseni.Enabled = true;
             toolStripSplitButton_YEkseni.Enabled = true;
             toolStripSplitButton_ZEkseni.Enabled = true;
+            splitContainer_xyz.Enabled = true;
             toolStripButton_Restore.Enabled = true;
+            groupBox_seriport.Enabled = true;
+            groupBox_Graphic.Enabled = true;
         }
         private void toolStripButton_Arabellek_Click(object sender, EventArgs e)
         {
@@ -540,14 +543,12 @@ namespace Mekatronik_Projesi
             else
                 splitContainer_z.Panel2Collapsed = true;
         }
-
         private void button_color_Click(object sender, EventArgs e)
         {
             if(colorDialog_veri.ShowDialog() == DialogResult.OK)
                 for (int i = 0; i < 6; i++)
                     grafikler[i].Color = colorDialog_veri.Color;
         }
-
         private void comboBox_Symbol_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox_Symbol.SelectedIndex != 10)
