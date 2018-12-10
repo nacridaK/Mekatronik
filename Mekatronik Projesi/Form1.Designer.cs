@@ -65,35 +65,36 @@
             this.toolStripTextBox_Xmax = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripTextBox_Xmin = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripMenuItem_ResetX = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_ComparisonX = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSplitButton_YEkseni = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripMenuItem_AutoScaleY = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox_Ymax = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripTextBox_Ymin = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripMenuItem_ResetY = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_ComparisonY = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSplitButton_ZEkseni = new System.Windows.Forms.ToolStripSplitButton();
             this.toolStripMenuItem_AutoScaleZ = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripTextBox_Zmax = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripTextBox_Zmin = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripMenuItem_ResetZ = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem_ComparisonZ = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton_Restore = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton_RealTime = new System.Windows.Forms.ToolStripButton();
-            this.tabPage_SeriPort = new System.Windows.Forms.TabPage();
-            this.propertyGrid_seriport = new System.Windows.Forms.PropertyGrid();
-            this.toolStripMenuItem_ComparisonX = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem_ComparisonY = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem_ComparisonZ = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox_seriport = new System.Windows.Forms.GroupBox();
-            this.groupBox_Graphic = new System.Windows.Forms.GroupBox();
-            this.colorDialog_veri = new System.Windows.Forms.ColorDialog();
-            this.button_color = new System.Windows.Forms.Button();
-            this.label_symbol = new System.Windows.Forms.Label();
-            this.comboBox_Symbol = new System.Windows.Forms.ComboBox();
+            this.tabPage_Ayarlar = new System.Windows.Forms.TabPage();
             this.groupBox_about = new System.Windows.Forms.GroupBox();
-            this.pictureBox_ytu = new System.Windows.Forms.PictureBox();
             this.label_about = new System.Windows.Forms.Label();
+            this.pictureBox_ytu = new System.Windows.Forms.PictureBox();
+            this.groupBox_Graphic = new System.Windows.Forms.GroupBox();
+            this.comboBox_Symbol = new System.Windows.Forms.ComboBox();
+            this.label_symbol = new System.Windows.Forms.Label();
+            this.button_color = new System.Windows.Forms.Button();
+            this.groupBox_seriport = new System.Windows.Forms.GroupBox();
+            this.propertyGrid_seriport = new System.Windows.Forms.PropertyGrid();
+            this.colorDialog_veri = new System.Windows.Forms.ColorDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl_sekmeler.SuspendLayout();
             this.tabPage_Grafik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer_xyz)).BeginInit();
@@ -118,11 +119,12 @@
             this.splitContainer_z.SuspendLayout();
             this.statusStrip_DurumÇubuğu.SuspendLayout();
             this.toolStrip_AraçÇubuğu.SuspendLayout();
-            this.tabPage_SeriPort.SuspendLayout();
-            this.groupBox_seriport.SuspendLayout();
-            this.groupBox_Graphic.SuspendLayout();
+            this.tabPage_Ayarlar.SuspendLayout();
             this.groupBox_about.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ytu)).BeginInit();
+            this.groupBox_Graphic.SuspendLayout();
+            this.groupBox_seriport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // seriPort
@@ -139,7 +141,7 @@
             // tabControl_sekmeler
             // 
             this.tabControl_sekmeler.Controls.Add(this.tabPage_Grafik);
-            this.tabControl_sekmeler.Controls.Add(this.tabPage_SeriPort);
+            this.tabControl_sekmeler.Controls.Add(this.tabPage_Ayarlar);
             this.tabControl_sekmeler.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl_sekmeler.Location = new System.Drawing.Point(0, 0);
             this.tabControl_sekmeler.Name = "tabControl_sekmeler";
@@ -243,7 +245,7 @@
             this.zgc_grafik_x2.ScrollMinX = 0D;
             this.zgc_grafik_x2.ScrollMinY = 0D;
             this.zgc_grafik_x2.ScrollMinY2 = 0D;
-            this.zgc_grafik_x2.Size = new System.Drawing.Size(338, 221);
+            this.zgc_grafik_x2.Size = new System.Drawing.Size(150, 46);
             this.zgc_grafik_x2.TabIndex = 3;
             this.zgc_grafik_x2.UseExtendedPrintDialog = true;
             this.zgc_grafik_x2.PointValueEvent += new ZedGraph.ZedGraphControl.PointValueHandler(this.zgc_grafikler_PointValueEvent);
@@ -333,7 +335,7 @@
             this.zgc_grafik_y2.ScrollMinX = 0D;
             this.zgc_grafik_y2.ScrollMinY = 0D;
             this.zgc_grafik_y2.ScrollMinY2 = 0D;
-            this.zgc_grafik_y2.Size = new System.Drawing.Size(337, 221);
+            this.zgc_grafik_y2.Size = new System.Drawing.Size(150, 46);
             this.zgc_grafik_y2.TabIndex = 4;
             this.zgc_grafik_y2.UseExtendedPrintDialog = true;
             this.zgc_grafik_y2.PointValueEvent += new ZedGraph.ZedGraphControl.PointValueHandler(this.zgc_grafikler_PointValueEvent);
@@ -404,7 +406,7 @@
             this.zgc_grafik_z2.ScrollMinX = 0D;
             this.zgc_grafik_z2.ScrollMinY = 0D;
             this.zgc_grafik_z2.ScrollMinY2 = 0D;
-            this.zgc_grafik_z2.Size = new System.Drawing.Size(340, 222);
+            this.zgc_grafik_z2.Size = new System.Drawing.Size(150, 46);
             this.zgc_grafik_z2.TabIndex = 5;
             this.zgc_grafik_z2.UseExtendedPrintDialog = true;
             this.zgc_grafik_z2.PointValueEvent += new ZedGraph.ZedGraphControl.PointValueHandler(this.zgc_grafikler_PointValueEvent);
@@ -570,7 +572,7 @@
             this.toolStripMenuItem_AutoScaleX.CheckOnClick = true;
             this.toolStripMenuItem_AutoScaleX.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem_AutoScaleX.Name = "toolStripMenuItem_AutoScaleX";
-            this.toolStripMenuItem_AutoScaleX.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_AutoScaleX.Size = new System.Drawing.Size(173, 22);
             this.toolStripMenuItem_AutoScaleX.Text = "Auto Scale";
             this.toolStripMenuItem_AutoScaleX.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_AutoScaleX_CheckedChanged);
             // 
@@ -593,9 +595,17 @@
             // toolStripMenuItem_ResetX
             // 
             this.toolStripMenuItem_ResetX.Name = "toolStripMenuItem_ResetX";
-            this.toolStripMenuItem_ResetX.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_ResetX.Size = new System.Drawing.Size(173, 22);
             this.toolStripMenuItem_ResetX.Text = "Reset Graph";
             this.toolStripMenuItem_ResetX.Click += new System.EventHandler(this.toolStripMenuItem_ResetX_Click);
+            // 
+            // toolStripMenuItem_ComparisonX
+            // 
+            this.toolStripMenuItem_ComparisonX.CheckOnClick = true;
+            this.toolStripMenuItem_ComparisonX.Name = "toolStripMenuItem_ComparisonX";
+            this.toolStripMenuItem_ComparisonX.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem_ComparisonX.Text = "Comparison Mode";
+            this.toolStripMenuItem_ComparisonX.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_ComparisonX_CheckedChanged);
             // 
             // toolStripSeparator6
             // 
@@ -626,7 +636,7 @@
             this.toolStripMenuItem_AutoScaleY.CheckOnClick = true;
             this.toolStripMenuItem_AutoScaleY.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem_AutoScaleY.Name = "toolStripMenuItem_AutoScaleY";
-            this.toolStripMenuItem_AutoScaleY.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_AutoScaleY.Size = new System.Drawing.Size(173, 22);
             this.toolStripMenuItem_AutoScaleY.Text = "Auto Scale";
             this.toolStripMenuItem_AutoScaleY.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_AutoScaleY_CheckedChanged);
             // 
@@ -649,9 +659,17 @@
             // toolStripMenuItem_ResetY
             // 
             this.toolStripMenuItem_ResetY.Name = "toolStripMenuItem_ResetY";
-            this.toolStripMenuItem_ResetY.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_ResetY.Size = new System.Drawing.Size(173, 22);
             this.toolStripMenuItem_ResetY.Text = "Reset Graph";
             this.toolStripMenuItem_ResetY.Click += new System.EventHandler(this.toolStripMenuItem_ResetY_Click);
+            // 
+            // toolStripMenuItem_ComparisonY
+            // 
+            this.toolStripMenuItem_ComparisonY.CheckOnClick = true;
+            this.toolStripMenuItem_ComparisonY.Name = "toolStripMenuItem_ComparisonY";
+            this.toolStripMenuItem_ComparisonY.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem_ComparisonY.Text = "Comparison Mode";
+            this.toolStripMenuItem_ComparisonY.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_ComparisonY_CheckedChanged);
             // 
             // toolStripSeparator7
             // 
@@ -682,7 +700,7 @@
             this.toolStripMenuItem_AutoScaleZ.CheckOnClick = true;
             this.toolStripMenuItem_AutoScaleZ.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem_AutoScaleZ.Name = "toolStripMenuItem_AutoScaleZ";
-            this.toolStripMenuItem_AutoScaleZ.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_AutoScaleZ.Size = new System.Drawing.Size(173, 22);
             this.toolStripMenuItem_AutoScaleZ.Text = "Auto Scale";
             this.toolStripMenuItem_AutoScaleZ.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_AutoScaleZ_CheckedChanged);
             // 
@@ -705,9 +723,17 @@
             // toolStripMenuItem_ResetZ
             // 
             this.toolStripMenuItem_ResetZ.Name = "toolStripMenuItem_ResetZ";
-            this.toolStripMenuItem_ResetZ.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem_ResetZ.Size = new System.Drawing.Size(173, 22);
             this.toolStripMenuItem_ResetZ.Text = "Reset Graph";
             this.toolStripMenuItem_ResetZ.Click += new System.EventHandler(this.toolStripMenuItem_ResetZ_Click);
+            // 
+            // toolStripMenuItem_ComparisonZ
+            // 
+            this.toolStripMenuItem_ComparisonZ.CheckOnClick = true;
+            this.toolStripMenuItem_ComparisonZ.Name = "toolStripMenuItem_ComparisonZ";
+            this.toolStripMenuItem_ComparisonZ.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMenuItem_ComparisonZ.Text = "Comparison Mode";
+            this.toolStripMenuItem_ComparisonZ.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_ComparisonZ_CheckedChanged);
             // 
             // toolStripSeparator8
             // 
@@ -732,64 +758,50 @@
             this.toolStripButton_RealTime.Name = "toolStripButton_RealTime";
             this.toolStripButton_RealTime.Size = new System.Drawing.Size(23, 22);
             // 
-            // tabPage_SeriPort
+            // tabPage_Ayarlar
             // 
-            this.tabPage_SeriPort.Controls.Add(this.groupBox_about);
-            this.tabPage_SeriPort.Controls.Add(this.groupBox_Graphic);
-            this.tabPage_SeriPort.Controls.Add(this.groupBox_seriport);
-            this.tabPage_SeriPort.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_SeriPort.Name = "tabPage_SeriPort";
-            this.tabPage_SeriPort.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_SeriPort.Size = new System.Drawing.Size(1023, 517);
-            this.tabPage_SeriPort.TabIndex = 2;
-            this.tabPage_SeriPort.Text = "Serial Port Settings";
-            this.tabPage_SeriPort.UseVisualStyleBackColor = true;
+            this.tabPage_Ayarlar.Controls.Add(this.groupBox_about);
+            this.tabPage_Ayarlar.Controls.Add(this.groupBox_Graphic);
+            this.tabPage_Ayarlar.Controls.Add(this.groupBox_seriport);
+            this.tabPage_Ayarlar.Location = new System.Drawing.Point(4, 22);
+            this.tabPage_Ayarlar.Name = "tabPage_Ayarlar";
+            this.tabPage_Ayarlar.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage_Ayarlar.Size = new System.Drawing.Size(1023, 517);
+            this.tabPage_Ayarlar.TabIndex = 2;
+            this.tabPage_Ayarlar.Text = "Settings Tab";
+            this.tabPage_Ayarlar.UseVisualStyleBackColor = true;
             // 
-            // propertyGrid_seriport
+            // groupBox_about
             // 
-            this.propertyGrid_seriport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.propertyGrid_seriport.Location = new System.Drawing.Point(3, 16);
-            this.propertyGrid_seriport.Name = "propertyGrid_seriport";
-            this.propertyGrid_seriport.PropertySort = System.Windows.Forms.PropertySort.NoSort;
-            this.propertyGrid_seriport.SelectedObject = this.seriPort;
-            this.propertyGrid_seriport.Size = new System.Drawing.Size(281, 492);
-            this.propertyGrid_seriport.TabIndex = 10;
-            this.propertyGrid_seriport.ToolbarVisible = false;
+            this.groupBox_about.Controls.Add(this.pictureBox1);
+            this.groupBox_about.Controls.Add(this.label_about);
+            this.groupBox_about.Controls.Add(this.pictureBox_ytu);
+            this.groupBox_about.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox_about.Location = new System.Drawing.Point(546, 3);
+            this.groupBox_about.Name = "groupBox_about";
+            this.groupBox_about.Size = new System.Drawing.Size(474, 511);
+            this.groupBox_about.TabIndex = 13;
+            this.groupBox_about.TabStop = false;
+            this.groupBox_about.Text = "About";
             // 
-            // toolStripMenuItem_ComparisonX
+            // label_about
             // 
-            this.toolStripMenuItem_ComparisonX.CheckOnClick = true;
-            this.toolStripMenuItem_ComparisonX.Name = "toolStripMenuItem_ComparisonX";
-            this.toolStripMenuItem_ComparisonX.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem_ComparisonX.Text = "Comparison Mode";
-            this.toolStripMenuItem_ComparisonX.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_ComparisonX_CheckedChanged);
+            this.label_about.AutoSize = true;
+            this.label_about.Location = new System.Drawing.Point(6, 221);
+            this.label_about.Name = "label_about";
+            this.label_about.Size = new System.Drawing.Size(357, 247);
+            this.label_about.TabIndex = 1;
+            this.label_about.Text = resources.GetString("label_about.Text");
             // 
-            // toolStripMenuItem_ComparisonY
+            // pictureBox_ytu
             // 
-            this.toolStripMenuItem_ComparisonY.CheckOnClick = true;
-            this.toolStripMenuItem_ComparisonY.Name = "toolStripMenuItem_ComparisonY";
-            this.toolStripMenuItem_ComparisonY.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem_ComparisonY.Text = "Comparison Mode";
-            this.toolStripMenuItem_ComparisonY.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_ComparisonY_CheckedChanged);
-            // 
-            // toolStripMenuItem_ComparisonZ
-            // 
-            this.toolStripMenuItem_ComparisonZ.CheckOnClick = true;
-            this.toolStripMenuItem_ComparisonZ.Name = "toolStripMenuItem_ComparisonZ";
-            this.toolStripMenuItem_ComparisonZ.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem_ComparisonZ.Text = "Comparison Mode";
-            this.toolStripMenuItem_ComparisonZ.CheckedChanged += new System.EventHandler(this.toolStripMenuItem_ComparisonZ_CheckedChanged);
-            // 
-            // groupBox_seriport
-            // 
-            this.groupBox_seriport.Controls.Add(this.propertyGrid_seriport);
-            this.groupBox_seriport.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox_seriport.Location = new System.Drawing.Point(3, 3);
-            this.groupBox_seriport.Name = "groupBox_seriport";
-            this.groupBox_seriport.Size = new System.Drawing.Size(287, 511);
-            this.groupBox_seriport.TabIndex = 11;
-            this.groupBox_seriport.TabStop = false;
-            this.groupBox_seriport.Text = "Serial Port Properties";
+            this.pictureBox_ytu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_ytu.Image")));
+            this.pictureBox_ytu.Location = new System.Drawing.Point(145, 11);
+            this.pictureBox_ytu.Name = "pictureBox_ytu";
+            this.pictureBox_ytu.Size = new System.Drawing.Size(212, 194);
+            this.pictureBox_ytu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_ytu.TabIndex = 0;
+            this.pictureBox_ytu.TabStop = false;
             // 
             // groupBox_Graphic
             // 
@@ -803,25 +815,6 @@
             this.groupBox_Graphic.TabIndex = 12;
             this.groupBox_Graphic.TabStop = false;
             this.groupBox_Graphic.Text = "Graphic Settings";
-            // 
-            // button_color
-            // 
-            this.button_color.Location = new System.Drawing.Point(6, 24);
-            this.button_color.Name = "button_color";
-            this.button_color.Size = new System.Drawing.Size(105, 32);
-            this.button_color.TabIndex = 0;
-            this.button_color.Text = "Change Data Color";
-            this.button_color.UseVisualStyleBackColor = true;
-            this.button_color.Click += new System.EventHandler(this.button_color_Click);
-            // 
-            // label_symbol
-            // 
-            this.label_symbol.AutoSize = true;
-            this.label_symbol.Location = new System.Drawing.Point(126, 18);
-            this.label_symbol.Name = "label_symbol";
-            this.label_symbol.Size = new System.Drawing.Size(116, 13);
-            this.label_symbol.TabIndex = 1;
-            this.label_symbol.Text = "Change Data Symbol : ";
             // 
             // comboBox_Symbol
             // 
@@ -845,37 +838,56 @@
             this.comboBox_Symbol.TabIndex = 2;
             this.comboBox_Symbol.SelectedIndexChanged += new System.EventHandler(this.comboBox_Symbol_SelectedIndexChanged);
             // 
-            // groupBox_about
+            // label_symbol
             // 
-            this.groupBox_about.Controls.Add(this.label_about);
-            this.groupBox_about.Controls.Add(this.pictureBox_ytu);
-            this.groupBox_about.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox_about.Location = new System.Drawing.Point(546, 3);
-            this.groupBox_about.Name = "groupBox_about";
-            this.groupBox_about.Size = new System.Drawing.Size(474, 511);
-            this.groupBox_about.TabIndex = 13;
-            this.groupBox_about.TabStop = false;
-            this.groupBox_about.Text = "About";
+            this.label_symbol.AutoSize = true;
+            this.label_symbol.Location = new System.Drawing.Point(126, 18);
+            this.label_symbol.Name = "label_symbol";
+            this.label_symbol.Size = new System.Drawing.Size(116, 13);
+            this.label_symbol.TabIndex = 1;
+            this.label_symbol.Text = "Change Data Symbol : ";
             // 
-            // pictureBox_ytu
+            // button_color
             // 
-            this.pictureBox_ytu.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_ytu.Image")));
-            this.pictureBox_ytu.Location = new System.Drawing.Point(103, 16);
-            this.pictureBox_ytu.Name = "pictureBox_ytu";
-            this.pictureBox_ytu.Size = new System.Drawing.Size(272, 256);
-            this.pictureBox_ytu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_ytu.TabIndex = 0;
-            this.pictureBox_ytu.TabStop = false;
+            this.button_color.Location = new System.Drawing.Point(6, 24);
+            this.button_color.Name = "button_color";
+            this.button_color.Size = new System.Drawing.Size(105, 32);
+            this.button_color.TabIndex = 0;
+            this.button_color.Text = "Change Data Color";
+            this.button_color.UseVisualStyleBackColor = true;
+            this.button_color.Click += new System.EventHandler(this.button_color_Click);
             // 
-            // label_about
+            // groupBox_seriport
             // 
-            this.label_about.AutoSize = true;
-            this.label_about.Location = new System.Drawing.Point(18, 282);
-            this.label_about.Name = "label_about";
-            this.label_about.Size = new System.Drawing.Size(357, 91);
-            this.label_about.TabIndex = 1;
-            this.label_about.Text = "This program is written for presentation of KOM3151 Mechatronics Project.\r\n\r\nTeam" +
-    " Members:\r\n\r\nYasin COŞGUN\r\nMurat YAPICI\r\nKadircan KURTULUŞ";
+            this.groupBox_seriport.Controls.Add(this.propertyGrid_seriport);
+            this.groupBox_seriport.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox_seriport.Location = new System.Drawing.Point(3, 3);
+            this.groupBox_seriport.Name = "groupBox_seriport";
+            this.groupBox_seriport.Size = new System.Drawing.Size(287, 511);
+            this.groupBox_seriport.TabIndex = 11;
+            this.groupBox_seriport.TabStop = false;
+            this.groupBox_seriport.Text = "Serial Port Properties";
+            // 
+            // propertyGrid_seriport
+            // 
+            this.propertyGrid_seriport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.propertyGrid_seriport.Location = new System.Drawing.Point(3, 16);
+            this.propertyGrid_seriport.Name = "propertyGrid_seriport";
+            this.propertyGrid_seriport.PropertySort = System.Windows.Forms.PropertySort.NoSort;
+            this.propertyGrid_seriport.SelectedObject = this.seriPort;
+            this.propertyGrid_seriport.Size = new System.Drawing.Size(281, 492);
+            this.propertyGrid_seriport.TabIndex = 10;
+            this.propertyGrid_seriport.ToolbarVisible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 317);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(268, 103);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -916,13 +928,14 @@
             this.statusStrip_DurumÇubuğu.PerformLayout();
             this.toolStrip_AraçÇubuğu.ResumeLayout(false);
             this.toolStrip_AraçÇubuğu.PerformLayout();
-            this.tabPage_SeriPort.ResumeLayout(false);
-            this.groupBox_seriport.ResumeLayout(false);
-            this.groupBox_Graphic.ResumeLayout(false);
-            this.groupBox_Graphic.PerformLayout();
+            this.tabPage_Ayarlar.ResumeLayout(false);
             this.groupBox_about.ResumeLayout(false);
             this.groupBox_about.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ytu)).EndInit();
+            this.groupBox_Graphic.ResumeLayout(false);
+            this.groupBox_Graphic.PerformLayout();
+            this.groupBox_seriport.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -940,7 +953,7 @@
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox_BaudRate;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton toolStripButton_SeriPort;
-        private System.Windows.Forms.TabPage tabPage_SeriPort;
+        private System.Windows.Forms.TabPage tabPage_Ayarlar;
         private System.Windows.Forms.PropertyGrid propertyGrid_seriport;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton toolStripButton_Arabellek;
@@ -992,6 +1005,7 @@
         private System.Windows.Forms.GroupBox groupBox_about;
         private System.Windows.Forms.PictureBox pictureBox_ytu;
         private System.Windows.Forms.Label label_about;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

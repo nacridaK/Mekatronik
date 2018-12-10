@@ -274,6 +274,10 @@ namespace Mekatronik_Projesi
             zgc_grafik_x1.GraphPane.Y2Axis.Scale.MaxAuto = toolStripMenuItem_AutoScaleX.Checked;
             zgc_grafik_x1.GraphPane.YAxis.Scale.MinAuto = toolStripMenuItem_AutoScaleX.Checked;
             zgc_grafik_x1.GraphPane.Y2Axis.Scale.MinAuto = toolStripMenuItem_AutoScaleX.Checked;
+            zgc_grafik_x2.GraphPane.YAxis.Scale.MaxAuto = toolStripMenuItem_AutoScaleX.Checked;
+            zgc_grafik_x2.GraphPane.Y2Axis.Scale.MaxAuto = toolStripMenuItem_AutoScaleX.Checked;
+            zgc_grafik_x2.GraphPane.YAxis.Scale.MinAuto = toolStripMenuItem_AutoScaleX.Checked;
+            zgc_grafik_x2.GraphPane.Y2Axis.Scale.MinAuto = toolStripMenuItem_AutoScaleX.Checked;
             if (!toolStripMenuItem_AutoScaleX.Checked)
             {
                 double Xmax, Xmin;
@@ -363,6 +367,10 @@ namespace Mekatronik_Projesi
             zgc_grafik_y1.GraphPane.Y2Axis.Scale.MaxAuto = toolStripMenuItem_AutoScaleY.Checked;
             zgc_grafik_y1.GraphPane.YAxis.Scale.MinAuto = toolStripMenuItem_AutoScaleY.Checked;
             zgc_grafik_y1.GraphPane.Y2Axis.Scale.MinAuto = toolStripMenuItem_AutoScaleY.Checked;
+            zgc_grafik_y2.GraphPane.YAxis.Scale.MaxAuto = toolStripMenuItem_AutoScaleY.Checked;
+            zgc_grafik_y2.GraphPane.Y2Axis.Scale.MaxAuto = toolStripMenuItem_AutoScaleY.Checked;
+            zgc_grafik_y2.GraphPane.YAxis.Scale.MinAuto = toolStripMenuItem_AutoScaleY.Checked;
+            zgc_grafik_y2.GraphPane.Y2Axis.Scale.MinAuto = toolStripMenuItem_AutoScaleY.Checked;
             if (!toolStripMenuItem_AutoScaleY.Checked)
             {
                 double Ymax, Ymin;
@@ -451,6 +459,10 @@ namespace Mekatronik_Projesi
             zgc_grafik_z1.GraphPane.Y2Axis.Scale.MaxAuto = toolStripMenuItem_AutoScaleZ.Checked;
             zgc_grafik_z1.GraphPane.YAxis.Scale.MinAuto = toolStripMenuItem_AutoScaleZ.Checked;
             zgc_grafik_z1.GraphPane.Y2Axis.Scale.MinAuto = toolStripMenuItem_AutoScaleZ.Checked;
+            zgc_grafik_z2.GraphPane.YAxis.Scale.MaxAuto = toolStripMenuItem_AutoScaleZ.Checked;
+            zgc_grafik_z2.GraphPane.Y2Axis.Scale.MaxAuto = toolStripMenuItem_AutoScaleZ.Checked;
+            zgc_grafik_z2.GraphPane.YAxis.Scale.MinAuto = toolStripMenuItem_AutoScaleZ.Checked;
+            zgc_grafik_z2.GraphPane.Y2Axis.Scale.MinAuto = toolStripMenuItem_AutoScaleZ.Checked;
             if (!toolStripMenuItem_AutoScaleZ.Checked)
             {
                 double Zmax, Zmin;
